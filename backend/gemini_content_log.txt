@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "pharmacy_101",
+    "name": "Apollo Pharmacy",
+    "address": "Near New Bus Stand, Pollachi",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835,
+    "lng": 77.072
+  },
+  {
+    "id": "pharmacy_102",
+    "name": "MedPlus Pharmacy",
+    "address": "Coimbatore Road, Pollachi",
+    "distance": "0.3 km away",
+    "distanceKm": 0.3,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.828,
+    "lng": 77.068
+  },
+  {
+    "id": "pharmacy_103",
+    "name": "Aravind Medicals",
+    "address": "Palakkad Road, Pollachi",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.832,
+    "lng": 77.065
+  },
+  {
+    "id": "pharmacy_104",
+    "name": "Sri Ram Medicals",
+    "address": "Udumalai Road, Pollachi",
+    "distance": "1.0 km away",
+    "distanceKm": 1.0,
+    "rating": "3.9 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.838,
+    "lng": 77.075
+  },
+  {
+    "id": "pharmacy_105",
+    "name": "Jeevan Medicals",
+    "address": "Gandhi Market Road, Pollachi",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.825,
+    "lng": 77.071
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "SRM001",
+    "name": "Sri Ram Medicals",
+    "address": "Kinathukadavu Main Road, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SPH003",
+    "name": "Sai Pharmacy",
+    "address": "Kattampatti Road, Near Panchayat Office, Kinathukadavu",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.825000,
+    "lng": 77.055000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.1 km away",
+    "distanceKm": 3.1,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  }
+]
+---
+[
+  {
+    "id": "KMDL101",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.5 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.83500,
+    "lng": 77.06500
+  },
+  {
+    "id": "SMPL102",
+    "name": "Sri Murugan Pharmacy",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.84000,
+    "lng": 77.05800
+  },
+  {
+    "id": "APPL103",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "0.8 km away",
+    "distanceKm": 0.8,
+    "rating": "4.7 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83000,
+    "lng": 77.06800
+  },
+  {
+    "id": "AMDL104",
+    "name": "Aravind Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.83200,
+    "lng": 77.06300
+  },
+  {
+    "id": "LMDL105",
+    "name": "Lakshmi Medicals",
+    "address": "Kattampatti Road, Kinathukadavu",
+    "distance": "0.6 km away",
+    "distanceKm": 0.6,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.82500,
+    "lng": 77.05500
+  }
+]
+---
+[
+  {
+    "id": "P001",
+    "name": "Sri Sakthi Medicals",
+    "address": "Kinathukadavu Main Road, Kinathukadavu, Pollachi",
+    "distance": "1.4 km away",
+    "distanceKm": 1.4,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "P002",
+    "name": "Aravind Medicals",
+    "address": "Near Kinathukadavu Bus Stand, Pollachi",
+    "distance": "2.1 km away",
+    "distanceKm": 2.1,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "P003",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.2 km away",
+    "distanceKm": 3.2,
+    "rating": "4.5 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "30-35 mins",
+    "lat": 10.845000,
+    "lng": 77.072000
+  },
+  {
+    "id": "P004",
+    "name": "Murugan Medicals",
+    "address": "Kattampatti Junction, Kinathukadavu",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.820000,
+    "lng": 77.058000
+  },
+  {
+    "id": "P005",
+    "name": "Lakshmi Medicals",
+    "address": "Opposite Government Hospital, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.838000,
+    "lng": 77.063000
+  }
+]
+---
+[
+  {
+    "id": "KMD001",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.6 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SMM003",
+    "name": "Sri Murugan Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.830000,
+    "lng": 77.062000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "3.2 km away",
+    "distanceKm": 3.2,
+    "rating": "4.4 ★",
+    "status": "Open Now",
+    "deliveryTime": "30-35 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  },
+  {
+    "id": "JVP005",
+    "name": "Jeevan Pharmacy",
+    "address": "Kinathukadavu Market Area",
+    "distance": "2.1 km away",
+    "distanceKm": 2.1,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.838000,
+    "lng": 77.066000
+  }
+]
+---
+[
+  {
+    "id": "P001",
+    "name": "Sri Sakthi Medicals",
+    "address": "Kinathukadavu Main Road, Kinathukadavu, Pollachi",
+    "distance": "1.4 km away",
+    "distanceKm": 1.4,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "P002",
+    "name": "Aravind Medicals",
+    "address": "Near Kinathukadavu Bus Stand, Pollachi",
+    "distance": "2.1 km away",
+    "distanceKm": 2.1,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "P003",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi-Coimbatore Road, Kinathukadavu",
+    "distance": "3.2 km away",
+    "distanceKm": 3.2,
+    "rating": "4.5 ★",
+    "status": "Open 24/7",
+    "deliveryTime": "30-35 mins",
+    "lat": 10.845000,
+    "lng": 77.072000
+  },
+  {
+    "id": "P004",
+    "name": "Murugan Medicals",
+    "address": "Kattampatti Junction, Kinathukadavu",
+    "distance": "0.9 km away",
+    "distanceKm": 0.9,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.820000,
+    "lng": 77.058000
+  },
+  {
+    "id": "P005",
+    "name": "Lakshmi Medicals",
+    "address": "Opposite Government Hospital, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.838000,
+    "lng": 77.063000
+  }
+]
+---
+[
+  {
+    "id": "KMD001",
+    "name": "Kinathukadavu Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "1.8 km away",
+    "distanceKm": 1.8,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.835000,
+    "lng": 77.065000
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Pollachi Main Road, Kinathukadavu",
+    "distance": "2.5 km away",
+    "distanceKm": 2.5,
+    "rating": "4.6 ★",
+    "status": "Open Now",
+    "deliveryTime": "25-30 mins",
+    "lat": 10.840000,
+    "lng": 77.068000
+  },
+  {
+    "id": "SMM003",
+    "name": "Sri Murugan Medicals",
+    "address": "Near Bus Stand, Kinathukadavu",
+    "distance": "1.5 km away",
+    "distanceKm": 1.5,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "15-20 mins",
+    "lat": 10.830000,
+    "lng": 77.062000
+  },
+  {
+    "id": "ARM004",
+    "name": "Aravind Medicals",
+    "address": "Coimbatore Road, Kinathukadavu",
+    "distance": "3.2 km away",
+    "distanceKm": 3.2,
+    "rating": "4.4 ★",
+    "status": "Open Now",
+    "deliveryTime": "30-35 mins",
+    "lat": 10.845000,
+    "lng": 77.070000
+  },
+  {
+    "id": "JVP005",
+    "name": "Jeevan Pharmacy",
+    "address": "Kinathukadavu Market Area",
+    "distance": "2.1 km away",
+    "distanceKm": 2.1,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "20-25 mins",
+    "lat": 10.838000,
+    "lng": 77.066000
+  }
+]
+---
+[
+  {
+    "id": "MRG003",
+    "name": "Murugan Medicals",
+    "address": "Kattampatti Road, Kinathukadavu, Pollachi",
+    "distance": "0.2 km away",
+    "distanceKm": 0.2,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8260,
+    "lng": 77.0620
+  },
+  {
+    "id": "JVA004",
+    "name": "Jeeva Medicals",
+    "address": "Near Bus Stand, Kinathukadavu, Pollachi",
+    "distance": "0.3 km away",
+    "distanceKm": 0.3,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8295,
+    "lng": 77.0610
+  },
+  {
+    "id": "PRY005",
+    "name": "Priya Medicals",
+    "address": "Pollachi Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.3 km away",
+    "distanceKm": 0.3,
+    "rating": "4.4 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8250,
+    "lng": 77.0590
+  },
+  {
+    "id": "SKT001",
+    "name": "Sri Sakthi Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.4 km away",
+    "distanceKm": 0.4,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8285,
+    "lng": 77.0575
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Kinathukadavu Market Road, Pollachi",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.8300,
+    "lng": 77.0550
+  }
+]
+---
+[
+  {
+    "id": "MRG003",
+    "name": "Murugan Medicals",
+    "address": "Kattampatti Road, Kinathukadavu, Pollachi",
+    "distance": "0.2 km away",
+    "distanceKm": 0.2,
+    "rating": "4.3 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8260,
+    "lng": 77.0620
+  },
+  {
+    "id": "JVA004",
+    "name": "Jeeva Medicals",
+    "address": "Near Bus Stand, Kinathukadavu, Pollachi",
+    "distance": "0.3 km away",
+    "distanceKm": 0.3,
+    "rating": "4.1 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8295,
+    "lng": 77.0610
+  },
+  {
+    "id": "PRY005",
+    "name": "Priya Medicals",
+    "address": "Pollachi Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.3 km away",
+    "distanceKm": 0.3,
+    "rating": "4.4 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8250,
+    "lng": 77.0590
+  },
+  {
+    "id": "SKT001",
+    "name": "Sri Sakthi Medicals",
+    "address": "Main Road, Kinathukadavu, Pollachi",
+    "distance": "0.4 km away",
+    "distanceKm": 0.4,
+    "rating": "4.2 ★",
+    "status": "Open Now",
+    "deliveryTime": "5-10 mins",
+    "lat": 10.8285,
+    "lng": 77.0575
+  },
+  {
+    "id": "APL002",
+    "name": "Apollo Pharmacy",
+    "address": "Kinathukadavu Market Road, Pollachi",
+    "distance": "0.7 km away",
+    "distanceKm": 0.7,
+    "rating": "4.0 ★",
+    "status": "Open Now",
+    "deliveryTime": "10-15 mins",
+    "lat": 10.8300,
+    "lng": 77.0550
+  }
+]
+---

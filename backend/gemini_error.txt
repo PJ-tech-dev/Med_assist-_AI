@@ -1,0 +1,115 @@
+Traceback (most recent call last):
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\grpc_helpers_async.py", line 85, in __await__
+    response = yield from self._call.__await__()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\grpc\aio\_interceptor.py", line 485, in __await__
+    response = yield from call.__await__()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\grpc\aio\_call.py", line 329, in __await__
+    raise _create_rpc_error(
+grpc.aio._call.AioRpcError: <AioRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 21.626250667s."
+	debug_error_string = "RESOURCE_EXHAUSTED:You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 21.626250667s."
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\app\agents\map_agent.py", line 39, in fetch_pharmacies_gemini
+    response = await chain.ainvoke({})
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3313, in ainvoke
+    input_ = await coro_with_context(part(), context, create_task=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 417, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1036, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 994, in agenerate
+    raise exceptions[0]
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1164, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 1010, in _agenerate
+    response: GenerateContentResponse = await _achat_with_retry(
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 229, in _achat_with_retry
+    return await _achat_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pranav_J\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pranav_J\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 227, in _achat_with_retry
+    raise e
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\langchain_google_genai\chat_models.py", line 220, in _achat_with_retry
+    return await generation_method(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\async_client.py", line 440, in generate_content
+    response = await rpc(
+               ^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\retry\retry_unary_async.py", line 232, in retry_wrapped_func
+    return await retry_target(
+           ^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\retry\retry_unary_async.py", line 164, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\retry\retry_base.py", line 215, in _retry_error_helper
+    raise final_exc from source_exc
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\retry\retry_unary_async.py", line 159, in retry_target
+    return await target()
+           ^^^^^^^^^^^^^^
+  File "d:\MedAssist AI A Multi-Agent Intelligent Healthcare Assistant for Patient Care Automation\backend\.venv\Lib\site-packages\google\api_core\grpc_helpers_async.py", line 88, in __await__
+    raise exceptions.from_grpc_error(rpc_error) from rpc_error
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 21.626250667s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 21
+}
+]
