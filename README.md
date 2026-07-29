@@ -17,9 +17,13 @@ MedAssist AI is a state-of-the-art, multi-agent AI system designed to revolution
 Powered by LangGraph and Gemini/GPT models, MedAssist uses a swarm of specialized AI agents:
 1. **Orchestrator Agent:** The brain of the system that routes user intents to the correct specialized sub-agent.
 2. **Emergency Triage Agent:** Rapidly assesses critical conditions and triggers SOS protocols.
-3. **Report Analysis Agent:** Parses uploaded medical documents to extract lab values and flag anomalies.
-4. **Medicine Safety Agent:** Checks drug interactions and verifies prescription safety.
-5. **Pharmacy Order Agent:** Assists in locating and ordering medications.
+3. **Symptom Analysis Agent:** Investigates patient symptoms, requests follow-up details, and suggests differential diagnoses.
+4. **Medical History Agent:** Retrieves and contextualizes past patient records, medications, and chronic conditions to inform current diagnoses.
+5. **Report Analysis Agent:** Parses uploaded medical documents to extract lab values and flag anomalies.
+6. **Medicine Safety Agent:** Checks drug interactions and verifies prescription safety.
+7. **Pharmacy Order Agent:** Assists in locating and ordering medications.
+8. **Health Monitoring Agent:** Tracks vital signs and biomarkers over time to predict potential health deterioration.
+9. **Map & Routing Agent:** Interfaces with geolocation services to find the nearest hospitals and pharmacies.
 
 ### 📄 Intelligent Medical Report Analysis (OCR)
 - Upload blood tests, MRI reports, and general clinical documents.
