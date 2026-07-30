@@ -1,6 +1,13 @@
 version: "3.9"
 
 services:
+  mongodb:
+    image: mongo:7
+    container_name: medassist_mongodb
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
   chromadb:
     image: chromadb/chroma:latest
     container_name: medassist_chromadb
@@ -16,14 +23,19 @@ services:
     container_name: medassist_backend
     env_file:
       - ./backend/.env
+    environment:
+      MONGODB_URL: mongodb://mongodb:27017/medassist
     ports:
       - "8000:8000"
     volumes:
       - ./backend:/app
     depends_on:
+      mongodb:
+        condition: service_started
       chromadb:
         condition: service_started
     restart: unless-stopped
 
 volumes:
   chroma_data:
+  mongo_data:

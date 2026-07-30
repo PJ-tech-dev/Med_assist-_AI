@@ -157,7 +157,7 @@ export async function fetchRealNearbyPharmacies(lat: number, lng: number): Promi
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lat, lng, radius_m: 3000, limit: 5 }),
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(8000),
     });
     if (resp.ok) {
       const json = await resp.json();
@@ -233,7 +233,7 @@ export async function fetchNearestHospitals(
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lat, lng, radius_m: radiusM, limit: 5 }),
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(8000),
     });
     if (resp.ok) {
       const json = await resp.json();
@@ -259,7 +259,7 @@ export async function fetchNearestHospitals(
     const resp = await fetch('https://overpass-api.de/api/interpreter', {
       method: 'POST',
       body: query,
-      signal: AbortSignal.timeout(18000),
+      signal: AbortSignal.timeout(7000),
     });
 
     if (resp.ok) {

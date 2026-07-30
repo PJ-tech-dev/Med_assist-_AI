@@ -14,7 +14,7 @@ Endpoints:
 """
 
 from fastapi import APIRouter, HTTPException, Query
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
 import logging
 
@@ -28,23 +28,23 @@ router = APIRouter(prefix="/maps", tags=["maps"])
 # ── Request schemas ──────────────────────────────────────────────────────────
 
 class MapFetchRequest(BaseModel):
-    lat: float
-    lng: float
+    lat: float = Field(ge=-90, le=90)
+    lng: float = Field(ge=-180, le=180)
     query: Optional[str] = None
 
 
 class HospitalFetchRequest(BaseModel):
-    lat: float
-    lng: float
-    radius_m: Optional[int] = 5000
-    limit: Optional[int] = 5
+    lat: float = Field(ge=-90, le=90)
+    lng: float = Field(ge=-180, le=180)
+    radius_m: Optional[int] = Field(default=5000, ge=500, le=20000)
+    limit: Optional[int] = Field(default=5, ge=1, le=10)
 
 
 class PharmacyFetchRequest(BaseModel):
-    lat: float
-    lng: float
-    radius_m: Optional[int] = 3000
-    limit: Optional[int] = 5
+    lat: float = Field(ge=-90, le=90)
+    lng: float = Field(ge=-180, le=180)
+    radius_m: Optional[int] = Field(default=3000, ge=500, le=20000)
+    limit: Optional[int] = Field(default=5, ge=1, le=10)
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

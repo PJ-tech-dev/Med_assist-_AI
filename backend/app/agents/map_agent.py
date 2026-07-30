@@ -64,6 +64,19 @@ def _open_hours_to_status(opening_hours: Optional[Dict]) -> str:
     return "Open Now" if opening_hours.get("open_now") else "Closed"
 
 
+def _estimated_travel_time(distance_km: float) -> str:
+    """Fast deterministic fallback used for OpenStreetMap results."""
+    if distance_km < 1:
+        return "5-10 mins"
+    if distance_km < 3:
+        return "10-15 mins"
+    if distance_km < 7:
+        return "15-25 mins"
+    if distance_km < 15:
+        return "25-40 mins"
+    return "40+ mins"
+
+
 # ── MapAgent class ──────────────────────────────────────────────────────────
 
 class MapAgent:
@@ -112,12 +125,6 @@ class MapAgent:
         if result:
             return result
 
-        # Gemini LLM geocoding (uses AI knowledge of world geography)
-        if self.llm:
-            result = await self._geocode_gemini(lat, lng)
-            if result:
-                return result
-
         return {
             "lat": lat, "lng": lng,
             "address": f"GPS Location ({lat:.4f}° N, {lng:.4f}° E)",
@@ -128,7 +135,7 @@ class MapAgent:
         params = {"latlng": f"{lat},{lng}", "key": self.gmaps_key}
         try:
             async with httpx.AsyncClient() as client:
-                resp = await client.get(GMAPS_GEOCODE_URL, params=params, timeout=8.0)
+                resp = await client.get(GMAPS_GEOCODE_URL, params=params, timeout=4.0)
                 if resp.status_code == 200:
                     data = resp.json()
                     if data.get("status") == "OK" and data.get("results"):
@@ -220,7 +227,7 @@ class MapAgent:
         results = []
         try:
             async with httpx.AsyncClient() as client:
-                resp = await client.get(GMAPS_PLACES_URL, params=params, timeout=12.0)
+                resp = await client.get(GMAPS_PLACES_URL, params=params, timeout=6.0)
                 if resp.status_code == 200:
                     data = resp.json()
                     status = data.get("status")
@@ -268,7 +275,7 @@ class MapAgent:
                     "key": self.gmaps_key,
                 }
                 async with httpx.AsyncClient() as client:
-                    resp = await client.get(GMAPS_DISTANCE_URL, params=params, timeout=8.0)
+                    resp = await client.get(GMAPS_DISTANCE_URL, params=params, timeout=4.0)
                     if resp.status_code == 200:
                         data = resp.json()
                         element = (data.get("rows") or [{}])[0].get("elements", [{}])[0]
@@ -280,11 +287,7 @@ class MapAgent:
 
         # Fallback: estimate from Haversine km
         km = calc_distance_km(origin_lat, origin_lng, dest_lat, dest_lng)
-        if km < 1:   return "5-10 mins"
-        if km < 3:   return "10-15 mins"
-        if km < 7:   return "15-25 mins"
-        if km < 15:  return "25-40 mins"
-        return "40+ mins"
+        return _estimated_travel_time(km)
 
     # ── Hospitals ────────────────────────────────────────────────────────────
 
@@ -305,13 +308,24 @@ class MapAgent:
                 # Also try clinic type for more results
                 raw += await self._google_places_nearby(lat, lng, radius_m, "clinic", limit)
 
-            for place in raw[:limit]:
+            valid_places = [
+                place for place in raw[:limit]
+                if place.get("geometry", {}).get("location", {}).get("lat") is not None
+                and place.get("geometry", {}).get("location", {}).get("lng") is not None
+            ]
+            travel_times = await asyncio.gather(*[
+                self.get_travel_time(
+                    lat, lng,
+                    place["geometry"]["location"]["lat"],
+                    place["geometry"]["location"]["lng"],
+                )
+                for place in valid_places
+            ])
+
+            for place, travel in zip(valid_places, travel_times):
                 geo  = place.get("geometry", {}).get("location", {})
                 h_lat, h_lng = geo.get("lat"), geo.get("lng")
-                if not h_lat or not h_lng:
-                    continue
                 dist_km = calc_distance_km(lat, lng, h_lat, h_lng)
-                travel  = await self.get_travel_time(lat, lng, h_lat, h_lng)
                 hospitals.append({
                     "id":             place.get("place_id", ""),
                     "name":           place.get("name", "Hospital"),
@@ -335,15 +349,8 @@ class MapAgent:
                 logger.info("Hospitals from Google: %d", len(hospitals))
                 return hospitals[:limit]
 
-        # ── Attempt 2: Gemini AI (works with GEMINI_MAPS_API_KEY) ───────────
-        if self.llm:
-            logger.info("Trying Gemini AI for hospital lookup")
-            hospitals = await self.fetch_hospitals_gemini(lat, lng)
-            if hospitals:
-                logger.info("Hospitals from Gemini: %d", len(hospitals))
-                return hospitals[:limit]
-
-        # ── Attempt 3: Overpass API (OpenStreetMap) fallback ────────────────
+        # Use a real geographic source before any AI. LLM-generated place names
+        # are slower and are not reliable enough for emergency routing.
         logger.info("Falling back to Overpass API for hospitals")
         hospitals = await self._overpass_hospitals(lat, lng, radius_m, limit)
 
@@ -384,12 +391,12 @@ class MapAgent:
         hospitals = []
         try:
             async with httpx.AsyncClient() as client:
-                resp = await client.post(OSM_OVERPASS_URL, content=query, headers=HEADERS, timeout=20.0)
+                resp = await client.post(OSM_OVERPASS_URL, content=query, headers=HEADERS, timeout=7.0)
                 if resp.status_code == 200:
                     for elem in resp.json().get("elements", []):
                         h_lat = elem.get("lat") or (elem.get("center") or {}).get("lat")
                         h_lng = elem.get("lon") or (elem.get("center") or {}).get("lon")
-                        if not h_lat or not h_lng:
+                        if h_lat is None or h_lng is None:
                             continue
                         tags = elem.get("tags", {})
                         name = tags.get("name") or tags.get("name:en") or "Hospital"
@@ -404,7 +411,7 @@ class MapAgent:
                             "address":        address,
                             "distanceKm":     dist_km,
                             "distance":       f"{dist_km} km away",
-                            "travelTime":     await self.get_travel_time(lat, lng, h_lat, h_lng),
+                            "travelTime":     _estimated_travel_time(dist_km),
                             "lat":            h_lat,
                             "lng":            h_lng,
                             "rating":         "",
@@ -435,12 +442,24 @@ class MapAgent:
             raw = await self._google_places_nearby(lat, lng, radius_m, "pharmacy", limit)
             if raw:
                 pharmacies = []
-                for place in raw[:limit]:
+                valid_places = [
+                    place for place in raw[:limit]
+                    if place.get("geometry", {}).get("location", {}).get("lat") is not None
+                    and place.get("geometry", {}).get("location", {}).get("lng") is not None
+                ]
+                travel_times = await asyncio.gather(*[
+                    self.get_travel_time(
+                        lat, lng,
+                        place["geometry"]["location"]["lat"],
+                        place["geometry"]["location"]["lng"],
+                    )
+                    for place in valid_places
+                ])
+                for place, travel in zip(valid_places, travel_times):
                     geo   = place.get("geometry", {}).get("location", {})
                     p_lat = geo.get("lat", lat)
                     p_lng = geo.get("lng", lng)
                     dist_km = calc_distance_km(lat, lng, p_lat, p_lng)
-                    travel  = await self.get_travel_time(lat, lng, p_lat, p_lng)
                     rating  = place.get("rating")
                     pharmacies.append({
                         "id":           place.get("place_id", f"gmaps-{len(pharmacies)}"),
@@ -460,16 +479,6 @@ class MapAgent:
                     return sorted(pharmacies, key=lambda x: x["distanceKm"])
 
         # ── Attempt 2: Gemini LLM (AI-assisted) ────────────────────────────
-        if self.llm:
-            location_str = f"coordinates ({lat:.4f}, {lng:.4f})"
-            try:
-                pharmacies = await self.fetch_pharmacies_gemini(lat, lng, location_str)
-                if pharmacies:
-                    logger.info("Pharmacies from Gemini: %d", len(pharmacies))
-                    return pharmacies
-            except Exception as e:
-                logger.warning("Gemini pharmacy fallback error: %s", e)
-
         # ── Attempt 3: Overpass ─────────────────────────────────────────────
         pharmacies = await self._overpass_pharmacies(lat, lng, radius_m, limit)
         if pharmacies:
@@ -500,7 +509,7 @@ class MapAgent:
         pharmacies = []
         try:
             async with httpx.AsyncClient() as client:
-                resp = await client.post(OSM_OVERPASS_URL, content=query, headers=HEADERS, timeout=15.0)
+                resp = await client.post(OSM_OVERPASS_URL, content=query, headers=HEADERS, timeout=7.0)
                 if resp.status_code == 200:
                     for elem in resp.json().get("elements", []):
                         p_lat = elem.get("lat", lat)
@@ -516,7 +525,7 @@ class MapAgent:
                             "distanceKm":   dist_km,
                             "rating":       "Not rated",
                             "status":       "Open Now",
-                            "deliveryTime": await self.get_travel_time(lat, lng, p_lat, p_lng),
+                            "deliveryTime": _estimated_travel_time(dist_km),
                             "lat":          p_lat,
                             "lng":          p_lng,
                             "source":       "openstreetmap",

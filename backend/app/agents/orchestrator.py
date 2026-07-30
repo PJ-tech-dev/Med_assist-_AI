@@ -168,6 +168,17 @@ async def node_merge_outputs(state: AgentState) -> AgentState:
 
     context_str = "\n\n".join(context_parts)
 
+    # A single specialist already produces a patient-facing answer. Avoid a
+    # second network LLM call, which is the dominant latency for most chats.
+    if len(context_parts) == 1:
+        state["final_response"] = context_parts[0].split(":\n", 1)[-1]
+        state["metadata"]["total_agent_execution_ms"] = total_ms
+        logger.info(
+            "session=%s | returned single-agent response | total_ms=%.1f",
+            state["session_id"], total_ms,
+        )
+        return state
+
     # ── Master LLM Synthesis ──
     from app.core.llm import get_llm
     from langchain_core.messages import SystemMessage, HumanMessage

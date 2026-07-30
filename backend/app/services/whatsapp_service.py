@@ -38,9 +38,9 @@ async def send_automated_whatsapp_alert(
     )
 
     # Check if Twilio settings are configured
-    twilio_sid = getattr(settings, "TWILIO_ACCOUNT_SID", None)
-    twilio_token = getattr(settings, "TWILIO_AUTH_TOKEN", None)
-    twilio_from = getattr(settings, "TWILIO_WHATSAPP_NUMBER", "whatsapp:+14155238886")
+    twilio_sid = settings.twilio_account_sid
+    twilio_token = settings.twilio_auth_token
+    twilio_from = settings.twilio_whatsapp_number
 
     if twilio_sid and twilio_token:
         try:

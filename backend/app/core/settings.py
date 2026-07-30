@@ -14,8 +14,10 @@ class Settings(BaseSettings):
     app_name: str = "MedAssist AI"
     app_env: str = "development"
     debug: bool = True
-    secret_key: str = "dev-secret-key-replace-in-production"
+    # Secrets must be supplied through the environment or backend/.env.
+    secret_key: str = ""
     api_v1_prefix: str = "/api/v1"
+    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
 
     # JWT
     jwt_algorithm: str = "HS256"
@@ -31,9 +33,13 @@ class Settings(BaseSettings):
     chroma_collection: str = "medassist_docs"
 
     # NVIDIA NIM AI Model Integration
-    nvidia_api_key: str = "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"
+    nvidia_api_key: str = ""
     nvidia_base_url: str = "https://integrate.api.nvidia.com/v1"
     nvidia_model: str = "z-ai/glm-5.2"
+    llm_max_tokens: int = 2048
+    llm_timeout_seconds: float = 30.0
+    llm_enable_thinking: bool = False
+    llm_reasoning_budget: int = 2048
 
     # OpenAI & Gemini AI Models
     openai_api_key: str = ""
@@ -47,6 +53,11 @@ class Settings(BaseSettings):
     # Get from: console.cloud.google.com → APIs & Services → Credentials
     google_maps_api_key: str = ""
 
+    # Optional Twilio WhatsApp delivery.
+    twilio_account_sid: str = ""
+    twilio_auth_token: str = ""
+    twilio_whatsapp_number: str = "whatsapp:+14155238886"
+
 
 @lru_cache()
 def get_settings() -> Settings:
@@ -54,3 +65,12 @@ def get_settings() -> Settings:
 
 
 settings = get_settings()
+
+
+def validate_runtime_settings() -> None:
+    """Fail early instead of serving JWTs signed with a known default secret."""
+    if not settings.secret_key:
+        raise RuntimeError(
+            "SECRET_KEY is required. Copy backend/.env.example to backend/.env "
+            "and configure a strong, unique value."
+        )

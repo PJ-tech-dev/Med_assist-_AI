@@ -6,8 +6,8 @@ from pydantic import BaseModel, Field, ConfigDict
 
 class OrderItemSchema(BaseModel):
     name: str = Field(..., json_schema_extra={"example": "Paracetamol 500mg"})
-    quantity: int = Field(default=1, json_schema_extra={"example": 1})
-    price: float = Field(default=5.0, json_schema_extra={"example": 5.0})
+    quantity: int = Field(default=1, ge=1, le=100, json_schema_extra={"example": 1})
+    price: float = Field(default=5.0, ge=0, json_schema_extra={"example": 5.0})
 
 
 class OrderCreateRequest(BaseModel):
@@ -16,7 +16,7 @@ class OrderCreateRequest(BaseModel):
     pharmacy_address: str = Field(..., json_schema_extra={"example": "124 Healthcare Avenue"})
     medicines: List[OrderItemSchema] = Field(..., min_length=1)
     delivery_address: str = Field(..., json_schema_extra={"example": "100 Main Street"})
-    total_amount: Optional[float] = Field(0.0, json_schema_extra={"example": 15.0})
+    total_amount: Optional[float] = Field(0.0, ge=0, json_schema_extra={"example": 15.0})
 
 
 class OrderStatusUpdateRequest(BaseModel):

@@ -70,9 +70,10 @@ Powered by LangGraph and Gemini/GPT models, MedAssist uses a swarm of specialize
 
 2. **Start the Backend:**
    ```bash
+   copy backend\.env.example backend\.env
    python main.py
    ```
-   *(This script automatically sets up your Python virtual environment, installs dependencies from `requirements.txt`, and launches the FastAPI server on `localhost:8000`)*
+   Configure `SECRET_KEY` and an LLM API key in `backend/.env` before starting. The launcher starts the API on `localhost:8000`.
 
 3. **Start the Frontend:**
    ```bash

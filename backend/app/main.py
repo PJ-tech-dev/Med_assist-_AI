@@ -4,14 +4,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from app.core.settings import settings
+from app.core.settings import settings, validate_runtime_settings
 from app.db.session import init_db
 from app.api.v1 import auth, patients, chat, reports, whatsapp, orders, health_metrics, maps
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize SQLite WAL mode and database schema
+    validate_runtime_settings()
     await init_db()
     yield
 
@@ -29,7 +29,7 @@ app.add_middleware(GZipMiddleware, minimum_size=500)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://10.105.234.75:3000"],
+    allow_origins=[origin.strip() for origin in settings.cors_origins.split(",") if origin.strip()],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

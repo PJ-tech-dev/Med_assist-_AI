@@ -1,8 +1,9 @@
 from typing import Optional, Dict, List, Any
-from beanie import Document, Indexed
+from beanie import Document, Indexed, PydanticObjectId
 from app.models.base import TimestampMixin
 
 class MedicineOrder(Document, TimestampMixin):
+    user_id: Indexed(PydanticObjectId)
     patient_id: Optional[Indexed(str)] = None
     pharmacy_name: str
     pharmacy_address: str

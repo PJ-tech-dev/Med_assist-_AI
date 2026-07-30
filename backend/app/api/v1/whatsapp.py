@@ -3,10 +3,12 @@ FastAPI router for Automated WhatsApp Emergency Alerts.
 """
 
 from typing import Optional
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, Depends, status
 from pydantic import BaseModel, Field
 
 from app.services.whatsapp_service import send_automated_whatsapp_alert
+from app.core.dependencies import get_current_user
+from app.models.user import User
 from app.utils.logger import get_logger
 
 logger = get_logger("api.whatsapp")
@@ -31,12 +33,15 @@ class WhatsAppAlertResponse(BaseModel):
 
 
 @router.post("/whatsapp-alert", response_model=WhatsAppAlertResponse, status_code=status.HTTP_200_OK)
-async def dispatch_whatsapp_alert(payload: WhatsAppAlertRequest):
+async def dispatch_whatsapp_alert(
+    payload: WhatsAppAlertRequest,
+    current_user: User = Depends(get_current_user),
+):
     """
     Automated WhatsApp Emergency Alert Endpoint.
     Automatically called by AI Agent / SmartWatch telemetry to send real-time WhatsApp emergency message.
     """
-    logger.info("API request to dispatch WhatsApp alert to %s", payload.phone)
+    logger.info("Emergency WhatsApp request | user=%s", current_user.id)
     
     result = await send_automated_whatsapp_alert(
         phone=payload.phone,
@@ -61,11 +66,14 @@ class AmbulanceDispatchRequest(BaseModel):
     reason: str = Field(..., json_schema_extra={"example": "Automated SOS dispatch due to unresponsive high BPM"})
 
 @router.post("/ambulance", status_code=status.HTTP_200_OK)
-async def dispatch_ambulance(payload: AmbulanceDispatchRequest):
+async def dispatch_ambulance(
+    payload: AmbulanceDispatchRequest,
+    current_user: User = Depends(get_current_user),
+):
     """
     Automated Ambulance Dispatch Simulation Endpoint.
     """
-    logger.warning(f"CRITICAL: Ambulance dispatched to {payload.location}. Reason: {payload.reason}")
+    logger.warning("Ambulance simulation requested | user=%s", current_user.id)
     return {
         "status": "dispatched",
         "service": "Emergency Medical Services",
