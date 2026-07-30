@@ -59,9 +59,14 @@ export type MapSource = 'google' | 'openstreetmap' | 'gemini' | 'fallback' | 'un
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
-const BACKEND = typeof window !== 'undefined'
-  ? (localStorage.getItem('medassist_api_url') || 'http://127.0.0.1:8000/api/v1')
-  : 'http://127.0.0.1:8000/api/v1';
+const getApiUrl = () => {
+  if (typeof window === 'undefined') return 'http://127.0.0.1:8000/api/v1';
+  const defaultUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000/api/v1'
+    : `http://${window.location.hostname}:8000/api/v1`;
+  return localStorage.getItem('medassist_api_url') || defaultUrl;
+};
+const BACKEND = getApiUrl();
 
 /**
  * Calculates distance between two GPS coordinates in km (Haversine formula).

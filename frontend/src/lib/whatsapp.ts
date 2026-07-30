@@ -67,11 +67,17 @@ export const sendWhatsappAlert = async (alertTitle: string, details: string, lat
 ⚠️ *URGENT*: Immediate medical response or check-in is requested!`;
 
   const encodedText = encodeURIComponent(messageText);
-  const whatsappUrl = `whatsapp://send?phone=${cleanPhone.replace('+', '')}&text=${encodedText}`;
+  // Use wa.me link which works on both PC (WhatsApp Web) and Mobile, instead of the native intent which fails if the app isn't installed.
+  const waMeUrl = `https://wa.me/${cleanPhone.replace('+', '')}?text=${encodedText}`;
 
-  // 2. Open WhatsApp Web / App Client directly BEFORE the async API call to avoid popup blockers
   if (typeof window !== 'undefined' && contact.enableWhatsapp) {
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    const link = document.createElement('a');
+    link.href = waMeUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
   // 1. Dispatch Automated Backend API Call to Python FastAPI service silently

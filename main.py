@@ -42,13 +42,13 @@ def log(prefix: str, color: str, msg: str):
 
 # ── Server starters ──────────────────────────────────────────────────────────
 def start_backend() -> subprocess.Popen:
-    log("BACKEND", Color.BLUE, "Starting FastAPI backend on http://127.0.0.1:8000 ...")
+    log("BACKEND", Color.BLUE, "Starting FastAPI backend on http://0.0.0.0:8000 (accessible on network) ...")
     python_exe = VENV_PYTHON if os.path.exists(VENV_PYTHON) else sys.executable
     cmd = [
         python_exe,
         "-m", "uvicorn",
         "app.main:app",
-        "--host", "127.0.0.1",
+        "--host", "0.0.0.0",
         "--port", "8000",
         "--reload"
     ]
@@ -65,7 +65,7 @@ def start_backend() -> subprocess.Popen:
 
 
 def start_frontend() -> subprocess.Popen:
-    log("FRONTEND", Color.GREEN, "Starting Next.js frontend on http://localhost:3000 ...")
+    log("FRONTEND", Color.GREEN, "Starting Next.js frontend on http://0.0.0.0:3000 (accessible on network) ...")
     npm_cmd = "npm.cmd" if sys.platform == "win32" else "npm"
     cmd = [npm_cmd, "run", "dev"]
     # Memory-optimized spawn

@@ -4,7 +4,10 @@
 
 export const getApiBaseUrl = (): string => {
   if (typeof window !== 'undefined') {
-    return localStorage.getItem('medassist_api_url') || 'http://127.0.0.1:8000/api/v1';
+    const defaultUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+      ? 'http://127.0.0.1:8000/api/v1' 
+      : `http://${window.location.hostname}:8000/api/v1`;
+    return localStorage.getItem('medassist_api_url') || defaultUrl;
   }
   return 'http://127.0.0.1:8000/api/v1';
 };
